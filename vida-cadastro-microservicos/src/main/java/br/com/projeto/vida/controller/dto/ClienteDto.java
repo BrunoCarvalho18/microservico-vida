@@ -9,9 +9,16 @@ public class ClienteDto {
 	private String cpf;
 	private String tipoHabilitacao;
 	private String email;
-
-	public ClienteDto(String nome, String cpf, String tipoHabilitacao, String email) {
+	
+	public ClienteDto() {
 		
+	}
+
+	public ClienteDto(String cpf, String email, String nome, String tipoHabilitacao) {
+		this.cpf = cpf;
+		this.email = email;
+		this.nome = nome;
+		this.tipoHabilitacao = tipoHabilitacao;
 	}
 
 	public ClienteDto(ClientesModel clientesModel) {

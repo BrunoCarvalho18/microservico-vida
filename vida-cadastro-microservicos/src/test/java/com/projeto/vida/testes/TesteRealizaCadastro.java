@@ -43,10 +43,10 @@ public class TesteRealizaCadastro {
 	@Test
 	public void testIncluirCliente() throws Exception {
 		 mvc.perform(MockMvcRequestBuilders.post("/api/v1/cadastrocliente")
-         		.content(asJsonString(new ClienteDto ("Bruno Carvalho de Sá","47149191053", "B", "brunocarvalhodesa@gmail.com")))
+         		.content(asJsonString(new ClienteDto ("47149191053", "brunoteste@gmail.com", "Bruno Carvalho", "B")))
                  .contentType(MediaType.APPLICATION_JSON)
                  .accept(MediaType.APPLICATION_JSON))
-                 .andExpect(status().is(200));
+                 .andExpect(status().is(201));
 	}
 	
 	
